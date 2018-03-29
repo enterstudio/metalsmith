@@ -16,7 +16,9 @@
     "precoverage": "npm install",
     "coverage": "node $HARMONY_OPTS ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
     "precoveralls": "npm run coverage",
-    "coveralls": "coveralls < coverage/lcov.info"
+    "coveralls": "coveralls < coverage/lcov.info",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "absolute": "0.0.1",
@@ -34,7 +36,8 @@
     "thunkify": "^2.1.2",
     "unyield": "0.0.1",
     "ware": "^1.2.0",
-    "win-fork": "^1.1.1"
+    "win-fork": "^1.1.1",
+    "snyk": "^1.70.3"
   },
   "devDependencies": {
     "assert-dir-equal": "~1.0.1",
@@ -56,5 +59,6 @@
     "jekyll",
     "wintersmith",
     "blacksmith"
-  ]
+  ],
+  "snyk": true
 }
